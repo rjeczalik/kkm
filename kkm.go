@@ -143,6 +143,9 @@ func parse(r io.Reader) (t []Ticket, err error) {
 
 		},
 	)
+	if len(t) == 0 {
+		return nil, errors.New("unable to find ticket history or no ticket history")
+	}
 	sort.Sort(ticketSlice(t))
 	return t, err
 }

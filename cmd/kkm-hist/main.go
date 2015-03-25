@@ -14,7 +14,7 @@ import (
 
 var (
 	card = flag.String("card", "UJ", "Student card owner - two letter university name. By default UJ.")
-	id   = flag.Int("id", 0, "Student card ID. Required")
+	id   = flag.Int("id", 0, "Student card ID. Required.")
 )
 
 var avail []string
@@ -58,4 +58,5 @@ func main() {
 		die(err)
 	}
 	buf.WriteTo(os.Stdout)
+	fmt.Println()
 }

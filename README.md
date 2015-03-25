@@ -1,9 +1,9 @@
-kkm
+kkm [![GoDoc](https://godoc.org/github.com/rjeczalik/kkm?status.svg)](https://godoc.org/github.com/rjeczalik/kkm)
 ---
 
 Get your ticket payment history or reverse lookup your name by your student card ID.
 
-### cmd/kkm-history
+### cmd/kkm-history [![GoDoc](https://godoc.org/github.com/rjeczalik/kkm/cmd/kkm-history?status.svg)](https://godoc.org/github.com/rjeczalik/kkm/cmd/kkm-history)
 
 Get your ticket payment history. Outputs `[]kkm.Ticket` in JSON, sorted by `PurchasedAt` field in increasing order. The `kkm.Ticket` is defined as:
 
@@ -50,7 +50,7 @@ Times are always in UTC. The price is a decimal with scale=2.
 ]
 ```
 
-### cmd/kkm-detail
+### cmd/kkm-detail [![GoDoc](https://godoc.org/github.com/rjeczalik/kkm/cmd/kkm-history?status.svg)](https://godoc.org/github.com/rjeczalik/kkm/cmd/kkm-history)
 
 Reverse lookup your personal details with your student card ID (`(kkm.Ticket).StudentID`) and KKM card ID (`(kkm.Ticket).KKMID`). Outputs `*kkm.Detail` in JSON. The `kkm.Detail` is defined as:
 
@@ -63,7 +63,7 @@ type Detail struct {
 }
 ```
 
-The `Email` and `Phone` may be empty. 
+The `Email` and `Phone` may be empty.
 
 *Installation*
 

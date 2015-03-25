@@ -7,6 +7,8 @@ Get your ticket payment history or reverse lookup your personal details with you
 
 Although the kkm project is licensed under the 3-clause BSD license, by using commands and libraries included herewith you must not lookup student card IDs and/or KKM card IDs that do not belong to you.
 
+(§5.3 [Regulamin](https://ebilet.kkm.krakow.pl/ebilet/Content/Files/REGULAMIN.pdf))
+
 ### cmd/kkm-history [![GoDoc](https://godoc.org/github.com/rjeczalik/kkm/cmd/kkm-history?status.svg)](https://godoc.org/github.com/rjeczalik/kkm/cmd/kkm-history)
 
 Get your ticket payment history. Outputs `[]kkm.Ticket` in JSON, sorted by `PurchasedAt` field in increasing order. The `kkm.Ticket` is defined as:

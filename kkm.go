@@ -160,8 +160,6 @@ const login = "https://ebilet.kkm.krakow.pl/ebilet/Logowanie"
 
 const ticket = "https://ebilet.kkm.krakow.pl/ebilet/KupBilet"
 
-const loginRet = "https://ebilet.kkm.krakow.pl/ebilet/Logowanie?ReturnUrl=%2febilet%2fKupBilet"
-
 func formLogin(studentID, kkmID int) url.Values {
 	return url.Values{
 		"CityCardTypeCode":  []string{"0"},
@@ -202,6 +200,7 @@ func client() *http.Client {
 	if err != nil {
 		panic(err)
 	}
+	// For mitmproxy + HTTPS.
 	if os.Getenv("HTTP_PROXY") != "" {
 		return &http.Client{
 			Jar:     jar,
@@ -246,7 +245,6 @@ func Details(studentID, kkmID int) (*Detail, error) {
 	}
 	reqLogin.Host = host
 	reqLogin.Header = headerLogin
-	reqLogin.PostForm = formLogin(studentID, kkmID)
 	reqLogin.ContentLength = int64(len(body))
 	respLogin, err := c.Do(reqLogin)
 	if err != nil {

@@ -35,7 +35,7 @@ var CityCardType = map[string]int{
 
 const history = "http://www.mpk.krakow.pl/pl/sprawdz-waznosc-biletu/index,1.ht" +
 	"ml?cityCardType=%d&dateValidity=1970-01-01&identityNumber=%d&sprawdz_kkm=" +
-	"Sprawd%C5%BA"
+	"Sprawd%%C5%%BA"
 
 const purchase = "2006-01-02 15:04"
 const expires = "2006-01-02"

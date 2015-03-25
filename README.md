@@ -1,7 +1,11 @@
 kkm [![GoDoc](https://godoc.org/github.com/rjeczalik/kkm?status.svg)](https://godoc.org/github.com/rjeczalik/kkm)
 ---
 
-Get your ticket payment history or reverse lookup your name by your student card ID.
+Get your ticket payment history or reverse lookup your personal details with your student card ID.
+
+### License
+
+Although the kkm project is licensed under the 3-clause BSD license, by using commands and libraries included herewith you must not lookup student card IDs and/or KKM card IDs that do not belong to you.
 
 ### cmd/kkm-history [![GoDoc](https://godoc.org/github.com/rjeczalik/kkm/cmd/kkm-history?status.svg)](https://godoc.org/github.com/rjeczalik/kkm/cmd/kkm-history)
 
